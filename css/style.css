@@ -1,0 +1,209 @@
+:root {
+  font-size: 62.5%;
+
+  /* цвета */
+  --text-color-royal-blue: #5956e9;
+  --text-color-white: #ffffff;
+  --text-color-black: #232233;
+  --text-color-gray: #6c6c72;
+  --text-color-purple: #5851ea;
+}
+
+/* сброс отступов */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* стили начертаний */
+.H2 {
+  font-size: 4.883rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.H4 {
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 4.73rem;
+}
+
+.H5 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.75rem;
+}
+
+.H6 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+.H7 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+/* классы для цветов текста */
+.text-black {
+  color: var(--text-color-black);
+}
+
+.text-white {
+  color: var(--text-color-white);
+}
+
+.text-royal-blue {
+  color: var(--text-color-royal-blue);
+}
+
+.text-gray {
+  color: var(--text-color-gray);
+}
+
+.text-purple {
+  color: var(--text-color-purple);
+}
+
+/* стили ссылок */
+.nonUnderlined {
+  text-decoration: none;
+}
+
+/* классы header */
+.text-header-contact {
+  color: var(--text-color-white);
+  text-decoration: none;
+}
+
+.text-header-navigation {
+  color: var(--text-color-black);
+  list-style: none;
+}
+
+.text-header-navigation a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* кнопка download в навигации */
+.header-nav-download a {
+  border-radius: 5px;
+  background-color: var(--text-color-royal-blue);
+  color: var(--text-color-white);
+  padding: 12px 15px;
+  text-decoration: none;
+}
+
+/* лого в навигации */
+.header-nav {
+  background-color: var(--text-color-white);
+  border-radius: 5px;
+}
+
+/* фон синих секций */
+.blue-background {
+  background-color: var(--text-color-purple);
+}
+
+/* фон футера */
+footer {
+  background-color: var(--text-color-black);
+}
+
+/* фон верхней плашки футера */
+.footer-contact-up-block {
+  background-color: var(--text-color-white);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.158);
+}
+
+/* фон карточек клиентов */
+.customers-block {
+  background-color: var(--text-color-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* фон блоков статистики */
+.download-list-block {
+  background-color: var(--text-color-royal-blue);
+  border-radius: 10px;
+}
+
+/* стили для статей about */
+.about-article {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* стили для карточек блога */
+.blog-article {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.158);
+  overflow: hidden;
+}
+
+.blog-article a {
+  text-decoration: none;
+}
+
+/* стили навигации в футере */
+.text-footer-contact {
+  color: var(--text-color-white);
+  list-style: none;
+}
+
+.text-footer-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* список соцсетей в хедере */
+.header-contact-ul {
+  list-style: none;
+}
+
+/* список соцсетей в футере */
+.footer-contact-ul {
+  list-style: none;
+}
+
+/* стили формы */
+.input-wrapper {
+  background-color: var(--text-color-white);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.input-wrapper input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-color-black);
+  font-size: 1.6rem;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--text-color-gray);
+}
+
+.input-wrapper button {
+  background-color: var(--text-color-royal-blue);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-color-white);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  padding: 10px 14px;
+}
