@@ -9,11 +9,18 @@
   --text-color-purple: #5851ea;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* сброс отступов */
 html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -88,6 +95,8 @@ body {
 .text-header-navigation {
   color: var(--text-color-black);
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .text-header-navigation a {
@@ -95,7 +104,45 @@ body {
   text-decoration: none;
 }
 
-/* кнопка download в навигации */
+/* классы header */
+header {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.header-contact {
+  padding-bottom: 10px;
+}
+
+.header-contact-number-mail {
+  margin: 0;
+  padding: 0;
+}
+
+.header-contact-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav {
+  position: relative;
+  background-color: var(--text-color-white);
+  border-radius: 5px;
+  padding: 0 10px;
+  height: 60px;
+}
+
+/* стили для лого */
+.logoPreview {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
 .header-nav-download a {
   border-radius: 5px;
   background-color: var(--text-color-royal-blue);
@@ -104,63 +151,329 @@ body {
   text-decoration: none;
 }
 
-/* лого в навигации */
-.header-nav {
-  background-color: var(--text-color-white);
-  border-radius: 5px;
-}
-
-/* фон синих секций */
+/* фон */
 .blue-background {
   background-color: var(--text-color-purple);
+  padding-bottom: 80px;
 }
 
 /* фон футера */
 footer {
+  position: relative;
   background-color: var(--text-color-black);
 }
 
-/* фон верхней плашки футера */
-.footer-contact-up-block {
-  background-color: var(--text-color-white);
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.158);
+/* классы hero-screen */
+.hero-screen {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 30px;
 }
 
-/* фон карточек клиентов */
-.customers-block {
+.hero-screen-main-rectangle {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.hero-screen-main {
   background-color: var(--text-color-white);
+  padding: 25px;
+}
+
+.hero-screen-download {
+  margin-bottom: 20px;
+}
+
+.download-buttons {
+  margin-top: 10px;
+}
+
+/* классы второй секции */
+.section2 {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.description {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.about-main {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.about-image {
+  position: relative;
+  z-index: 1;
+}
+
+/* стили для блоков внутри about */
+.about-article {
+  position: relative;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 15px 15px 15px 55px;
+  text-align: left;
+  margin-bottom: 20px;
+  width: 95%;
 }
 
-/* фон блоков статистики */
+.about-check-mark {
+  position: absolute;
+  left: 4%;
+  top: 25%;
+  transform: translateY(-50%);
+}
+
+/* классы для секции 3 */
+.section3 {
+  width: 100%;
+  max-width: 100%;
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.app-features-block-center,
+.app-features-block-left,
+.app-features-block-right {
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.158);
+  text-align: center;
+  width: 100%;
+}
+
+.app-features-block-center p,
+.app-features-block-left p,
+.app-features-block-right p {
+  margin: 0;
+}
+
+.app-features-main {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.app-features-main-column {
+  width: 100%;
+}
+
+.app-features-image {
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 60%;
+  max-width: 280px;
+  margin: 20px auto;
+}
+
+.icon-big {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* классы для секции 4 */
+.section4 {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.download-app-main {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.download-app-description {
+  width: 100%;
+  text-align: center;
+}
+
+.download-app-list {
+  margin-top: 20px;
+}
+
 .download-list-block {
   background-color: var(--text-color-royal-blue);
   border-radius: 10px;
+  width: 130px;
+  height: 140px;
+  padding: 15px;
+  margin: 10px auto;
 }
 
-/* стили для статей about */
-.about-article {
+.medium-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+/* классы для 5 секции */
+.section5 {
+  width: 100%;
+  max-width: 100%;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.howtouse-video {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  margin-top: 30px;
+}
+
+/* классы для 6 секции */
+.section6 {
+  width: 100%;
+  max-width: 100%;
+  padding: 60px 5% 0;
+  text-align: center;
+}
+
+.customers-carousel {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.customers-block {
+  background-color: var(--text-color-white);
   border-radius: 10px;
+  width: 90%;
+  padding: 25px 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
 }
 
-/* стили для карточек блога */
+.customers-block h3 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.customers-block-absolute1,
+.customers-block-absolute2 {
+  display: none;
+  position: absolute;
+}
+
+.customers-block-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.customers-block-absolute1 {
+  left: 32%;
+  top: 10%;
+  z-index: 0;
+}
+
+.customers-block-absolute2 {
+  left: 8%;
+  top: 10%;
+  z-index: 0;
+}
+
+.carousel-dots {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+/* стили для секции 7 */
+.section7 {
+  width: 90%;
+  max-width: 1400px;
+  margin: 60px auto 100px;
+  text-align: center;
+}
+
+.blog-article-block {
+  margin-top: 40px;
+  width: 100%;
+}
+
 .blog-article {
   border-radius: 10px;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.158);
   overflow: hidden;
+  text-align: left;
+}
+
+.blog-article p,
+.blog-article h3,
+.blog-article a {
+  padding-left: 18px;
 }
 
 .blog-article a {
   text-decoration: none;
+  display: block;
+  padding-bottom: 15px;
 }
 
-/* стили навигации в футере */
+/* классы для верхней плашки футера */
+.footer-contact-up-block {
+  background-color: var(--text-color-white);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.158);
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+
+.email-footer-contact-up,
+.phone-footer-contact-up {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.footer-line {
+  display: none;
+}
+
+.huge-icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+/* классы для футера */
+.footer-main {
+  padding: 40px 5% 50px;
+}
+
+.footer-main-contacts {
+  width: 100%;
+}
+
+.footer-main-contacts-1,
+.footer-main-contacts-2,
+.footer-main-contacts-3 {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.footer-contact-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+}
+
 .text-footer-contact {
   color: var(--text-color-white);
   list-style: none;
+  padding: 0;
 }
 
 .text-footer-contact a {
@@ -168,14 +481,18 @@ footer {
   text-decoration: none;
 }
 
-/* список соцсетей в хедере */
-.header-contact-ul {
-  list-style: none;
+.text-footer-contact li {
+  margin-top: 10px;
 }
 
-/* список соцсетей в футере */
-.footer-contact-ul {
-  list-style: none;
+.footer-main-contacts-2 h3,
+.footer-main-contacts-3 h3 {
+  margin-top: 0;
+}
+
+.icon24 {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 /* стили формы */
@@ -183,6 +500,8 @@ footer {
   background-color: var(--text-color-white);
   border-radius: 5px;
   overflow: hidden;
+  padding: 4px 4px 4px 16px;
+  margin-top: 10px;
 }
 
 .input-wrapper input {
@@ -191,6 +510,7 @@ footer {
   outline: none;
   color: var(--text-color-black);
   font-size: 1.6rem;
+  width: 100%;
 }
 
 .input-wrapper input::placeholder {
@@ -206,4 +526,5 @@ footer {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.4rem;
   padding: 10px 14px;
+  margin-top: 8px;
 }
