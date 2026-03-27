@@ -86,7 +86,7 @@ body {
   text-decoration: none;
 }
 
-/* классы header */
+/* классы текста header */
 .text-header-contact {
   color: var(--text-color-white);
   text-decoration: none;
@@ -143,6 +143,12 @@ header {
   border-radius: 5px;
 }
 
+.logoPreview img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
 .header-nav-download a {
   border-radius: 5px;
   background-color: var(--text-color-royal-blue);
@@ -151,10 +157,25 @@ header {
   text-decoration: none;
 }
 
+/* общий стиль для иконок */
+.icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.icon24 {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 /* фон */
 .blue-background {
   background-color: var(--text-color-purple);
   padding-bottom: 80px;
+  background-image: url("images/Background_Image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* фон футера */
@@ -177,9 +198,27 @@ footer {
   margin: 20px auto;
 }
 
+.hero-screen-rectangle {
+  display: none;
+  position: absolute;
+  left: 70%;
+  top: -13%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
 .hero-screen-main {
   background-color: var(--text-color-white);
   padding: 25px;
+}
+
+.hero-screen-image {
+  width: 70%;
+  max-width: 350px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+  display: block;
 }
 
 .hero-screen-download {
@@ -188,6 +227,12 @@ footer {
 
 .download-buttons {
   margin-top: 10px;
+}
+
+.download-buttons img {
+  display: block;
+  width: 100%;
+  max-width: 180px;
 }
 
 /* классы второй секции */
@@ -213,6 +258,19 @@ footer {
 .about-image {
   position: relative;
   z-index: 1;
+}
+
+.about-image img {
+  width: 70%;
+}
+
+.about-image-ellipse {
+  display: none;
+  position: absolute;
+  left: 16%;
+  top: 73%;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 /* стили для блоков внутри about */
@@ -275,9 +333,21 @@ footer {
   margin: 20px auto;
 }
 
+.app-features-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 40px;
+}
+
 .icon-big {
   width: 5rem;
   height: 5rem;
+}
+
+.medium-icon {
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 /* классы для секции 4 */
@@ -311,9 +381,10 @@ footer {
   margin: 10px auto;
 }
 
-.medium-icon {
-  width: 3.5rem;
-  height: 3.5rem;
+.download-app-main > img {
+  width: 60%;
+  max-width: 280px;
+  height: auto;
 }
 
 /* классы для 5 секции */
@@ -354,6 +425,14 @@ footer {
   margin: 0 auto;
 }
 
+.customers-block img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
 .customers-block h3 {
   margin-top: 20px;
   margin-bottom: 0;
@@ -387,6 +466,10 @@ footer {
   margin-bottom: 60px;
 }
 
+.carousel-dot {
+  border-radius: 10px;
+}
+
 /* стили для секции 7 */
 .section7 {
   width: 90%;
@@ -408,6 +491,14 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.158);
   overflow: hidden;
   text-align: left;
+}
+
+.blog-article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .blog-article p,
@@ -490,12 +581,7 @@ footer {
   margin-top: 0;
 }
 
-.icon24 {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
-/* стили формы */
+/* стили для формы */
 .input-wrapper {
   background-color: var(--text-color-white);
   border-radius: 5px;
@@ -522,9 +608,10 @@ footer {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  color: var(--text-color-white);
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.4rem;
   padding: 10px 14px;
-  margin-top: 8px;
+}
+
+.input-wrapper button img {
+  width: 2rem;
+  height: 2rem;
 }
