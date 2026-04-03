@@ -1123,3 +1123,37 @@ header {
     gap: 30px;
   }
 }
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--text-color-royal-blue);
+  color: var(--text-color-white);
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  z-index: 9999;
+  transition: top 0.3s ease;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--text-color-royal-blue);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.input-wrapper:focus-within {
+  outline: 3px solid var(--text-color-royal-blue);
+  outline-offset: 2px;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+}
